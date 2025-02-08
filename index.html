@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Lista</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="backgroundImage"></div>
+    <div class="gifs">
+        <img class="dog" src="./gifs/Dog.gif">
+        <img class="butterfly" src="./gifs/ButterflyAnimated.gif">
+        <img class="butterfly1" src="./gifs/ButterflyAnimated.gif">
+        <img class="butterfly2" src="./gifs/ButterflyAnimated.gif">
+        <img class="butterfly3" src="./gifs/ButterflyAnimated.gif">
+        <img class="butterfly4" src="./gifs/ButterflyAnimated.gif">
+        <img class="tower" src="./gifs/Wizzard_tower.gif">
+        <img class="pig" src="./gifs/Pig.webp">
+        <img class="cow" src="./gifs/Cows.webp">
+        <img class="chicken" src="./gifs/chicken-stardew-valley.gif">
+    <div class="container containerBackground">
+        <div class="BoxBackground container" > 
+            <div class="BoxForeground container">
+                <h1>Stardew Valley</h1>
+                <h3>To Do List</h3>
+                <input onkeydown="keyDown(event)" type="text" id="taskInput" placeholder="Add a Task" />
+                <button onclick="addTask()">ADD</button>
+                <p class="inputError"></p>
+                <ul id="taskList">
+
+                </ul>
+            </div>
+            <div id="editPopupContainer" class="popupContainer">
+                <div class="popupBackground">
+                    <div class="popupForeground">
+                        <div id="editPopup" class="popup">
+                            <h3>Edit Task</h3>
+                            <input onkeydown="keyDownSave(event)" type="text" id="editInput">
+                            <button onclick="saveEdit()">Save</button>
+                            <button onclick="closePopup()">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

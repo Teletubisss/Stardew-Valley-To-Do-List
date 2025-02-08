@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/Stardew-Valley-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyCustomFont2';
+    src: url('fonts/StardewValley.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+body {
+    font-family: 'MyCustomFont2';
+    text-align: center;
+    background-image: url(./images/background.pdf);
+    font-size: 2rem;
+    overflow: auto;
+    height: 100%;
+}
+
+
+.container {
+    margin: 4rem;
+    padding: 40px;
+}
+
+.containerBackground {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.BoxBackground {
+    background-color: rgb(151, 76, 14);
+    border: 4px solid rgba(0, 0, 0, 0.61);
+    padding: 0;
+}
+
+.BoxForeground {
+    background-color: rgb(235, 175, 140);
+    border: 4px solid rgba(0, 0, 0, 0.808);
+    margin: 8px;
+}
+
+input {
+    background-color: #fff8f8;
+    border: 2px solid rgb(78, 56, 56);
+    padding: 10px;
+    font-family: 'MyCustomFont2';
+    font-size: 1.6rem;
+}
+.inputError {
+    display: none;
+    background-color: #fff8f8;
+    border: 2px solid rgba(0, 0, 0, 0.705);
+    padding: 5px;
+    margin: 35px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 30px;
+}
+li {
+    display: flex;
+    padding: 8px;
+    margin: 10px;
+    background-color: #fff8f8;
+    border: 2px solid black;
+}
+
+.listFlex {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.buttonList {
+    margin: 5px;
+    font-family: 'MyCustomFont2';
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 7rem;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+.done {
+    text-decoration: line-through;
+    color: rgba(65, 28, 19, 0.89);
+}
+
+button {
+    background: rgb(151, 76, 14);
+    color: black;
+    border: 2px solid rgba(0, 0, 0, 0.63);
+    padding: 10px;
+    cursor: pointer;
+    width: 6rem;
+    font-family: 'MyCustomFont2';
+    font-size: 1.6rem;
+}
+
+span {
+    cursor: pointer;
+    padding: 0;
+}
+
+.popupContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popupBackground {
+    background-color: rgb(151, 76, 14);
+    padding: 10px;
+    border: 4px solid rgba(0, 0, 0, 0.822);
+}
+.popupForeground {
+    background-color: rgb(235, 175, 140);
+    border: 4px solid rgba(0, 0, 0, 0.822);
+}
+.popup {
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.popup input {
+    width: 80%;
+    padding: 5px;
+}
+
+.popup button {
+    margin-top: 10px;
+}
+
+.todo-text {
+    width: 70rem;
+    margin-top: 5px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+.tower {
+    position: fixed;
+    bottom: 0%;
+    left: 5%;
+}
+
+.dog {
+    position: fixed;
+    bottom: 0%;
+    left: 10%;
+}
+
+.butterfly {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+.butterfly1 {
+    position: absolute;
+    top: 20%;
+    left: 70%;
+}
+.butterfly2 {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+}
+.butterfly3 {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+.butterfly4 {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+.chicken {
+    position: fixed;
+    bottom: 0%;
+    right: 10%;
+}
+.pig {
+    position: absolute;
+    width: 8rem;
+    height: auto;
+    bottom: 0%;
+    right: 2%;
+}
+.cow {
+    position: absolute;
+    width: 8rem;
+    height: auto;
+    bottom: 0%;
+    right: 20%;
+}
