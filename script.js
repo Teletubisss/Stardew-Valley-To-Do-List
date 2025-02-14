@@ -56,6 +56,7 @@ let removeTask = (element) => {
 
 let toggleTask = (element) => {
     element.classList.toggle('done');
+    saveToStorage();
 }
 
 let editTask = (element) => {
@@ -77,36 +78,60 @@ let closePopup = () => {
 }
 
 let saveToStorage = () => {
-    let arrayData = [];
 
-    let tasks = document.getElementById('taskList');
+    const tasks = Array.from(document.querySelectorAll('#taskList li')).map(task => ({
+        text: task.querySelector("span").innerText,
+        done: task.querySelector("span").classList.contains("done")
+    }));;
+    console.log(tasks)
 
-    for(let i=0; i<tasks.children.length; i++) {
-        let task = tasks.children[i].children[0].children[0].innerText;
-        arrayData.push(task);
-    }
     
-    localStorage.setItem("stardrewData", JSON.stringify(arrayData));
+    localStorage.setItem("stardrewData", JSON.stringify(tasks));
 }
 
 let loadFromStorage = () => {
-    let listHtml = '';
-    let arrayData = [];
-    arrayData = JSON.parse(localStorage.getItem("stardrewData"));  
-    if (arrayData === null)
-        return;
 
-    for(let i=0; i<arrayData.length; i++) {
-        let innerHtml = getListInnerHtml(arrayData[i]);
-        let item = '<li>' + innerHtml + '</li>';
-        listHtml = listHtml + item;
-    }   
+    const tasks = JSON.parse(localStorage.getItem("stardrewData")) || [];
 
-    let tasks = document.getElementById('taskList');
-    tasks.innerHTML = listHtml;
+    const taskList = document.querySelector("#taskList");
+
+    tasks.forEach(task => {
+        let toDoItem = document.createElement('li');
+        toDoItem.innerHTML = `<div class="listFlex">
+                                <span class='todo-text ${task.done ? "done":""}' onclick = 'toggleTask(this)' >${task.text}</span>
+                                <button class="buttonList" onclick = 'editTask(this.previousElementSibling)' >EDIT</button>
+                                 <button class="buttonList" onclick = 'removeTask(this)' >DELETE</button>
+                            </div>`;
+        taskList.appendChild(toDoItem);
+
+    });
+
+
 }
 
 //runs at page initialization
 window.onload = function() {
     loadFromStorage();
 }
+
+
+
+
+
+
+
+
+// const car = {
+//     number: 234,
+//     color: "red",
+// }
+
+// // {
+// //     "number": 234,
+// //     "color": "red"
+// // }
+
+
+// const numbers = []
+// console.log(JSON.stringify(car))
+// console.log(numbers)
